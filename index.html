@@ -12,7 +12,46 @@
     <div class="container">
         <h1>Learn the Basics of Git</h1>
         <img src="images/cover.jpg" alt="">
-        
+        <h4 id="let-s-get-started-">Let’s get started!</h4>
+        <h3 id="what-is-version-control">What is Version Control?</h3>
+        <blockquote>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. So ideally, we can place any file in the computer on version control.</blockquote>
+        <h4 id="umm-okay-but-why-tho">Umm… Okay… But Why Tho?</h4>
+        <h4 id="here-s-why-">Here’s Why:</h4>
+        <p>A Version Control System (VCS) allows you to revert files back to a previous state, revert the entire project back to a previous state, review changes made over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more. Using a VCS also means that if you screw things up or lose files, you can generally recover easily. And sometimes you just want to know <strong>“who wrote this crap”</strong>, and having access to that information is worthwhile ?.</p>
+        <h3 id="so-what-is-git">So What is Git?</h3>
+        <p>Git is a version-control system for tracking changes in computer files and coordinating work on those files among multiple people. Git is a <strong><em>Distributed Version Control System</em></strong>. So Git does not necessarily rely on a central server to store all the versions of a project’s files. Instead, every user “clones” a copy of a repository (a collection of files) and has the <strong><em>full</em></strong> history of the project on their own hard drive. This clone has <em>all</em> of the metadata of the original while the original itself is stored on a self-hosted server or a third party hosting service like GitHub.</p>
+        <p>Git helps you <strong><em>keep track of the changes</em></strong> you make to your code. It is basically the history tab for your code editor(With no incognito mode ?). If at any point while coding you hit a fatal error and don’t know what’s causing it you can always revert back to the stable state. So it is very helpful for debugging. Or you can simply see what changes you made to your code over time.</p>
+        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://cdn-media-1.freecodecamp.org/images/1*Lp_67l9zwur7aaFAhpVDrg.png" class="kg-image" alt=""><figcaption>A simple example of version history of a file.</figcaption></figure>
+        <p>In the example above, all three cards represent different versions of the same file. We can select which version of the file we want to use at any point of time. So I can jump to and fro to any version of the file in the git time continuum.</p>
+        <p>Git also helps you <strong><em>synchronise code</em></strong> between multiple people. So imagine you and your friend are collaborating on a project. You both are working on the same project files. Now Git takes those changes you and your friend made independently and merges them to a single “<strong>Master</strong>” repository. So by using Git you can ensure you both are working on the most recent version of the repository. So you don’t have to worry about mailing your files to each other and working with a ridiculous number of copies of the original file. And collaborating long distance becomes as easy as HTML ?.</p>
+    
+        <h4 id="what-is-a-repository">What is a Repository ?</h4>
+        <p>A <strong>repository</strong> a.k.a. <strong>repo</strong> is nothing but a collection of source code.</p>
+    
+        <h4 id="there-are-four-fundamental-elements-in-the-git-workflow-">There are four fundamental elements in the Git Workflow.</h4>
+        <p><strong>Working Directory</strong>, <strong>Staging Area</strong>, <strong>Local Repository</strong> and <strong>Remote Repository</strong>.</p>
+        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png" class="kg-image" alt=""><figcaption>Diagram of a simple Git Workflow</figcaption></figure>
+
+        <p><strong>If you consider a file in your Working Directory, it can be in three possible states.</strong></p>
+        <ol><li><strong>It can be staged.</strong> Which means the files with the updated changes are marked to be committed to the local repository but not yet committed.</li><li><strong>It can be modified</strong>. Which means the files with the updated changes are not yet stored in the local repository.</li><li><strong>It can be committed</strong>. Which means that the changes you made to your file are safely stored in the local repository.</li></ol>
+        <ul><li><code>git add</code> is a command used to add a file that is in the working directory to the staging area.</li><li><code>git commit</code> is a command used to add all files that are staged to the local repository.</li><li><code>git push</code> is a command used to add all committed files in the local repository to the remote repository. So in the remote repository, all files and changes will be visible to anyone with access to the remote repository.</li><li><code>git fetch</code> is a command used to get files from the remote repository to the local repository but not into the working directory.</li><li><code>git merge</code> is a command used to get the files from the local repository into the working directory.</li><li><code>git pull</code> is command used to get files from the remote repository directly into the working directory. It is equivalent to a <code>git fetch</code> and a <code>git merge</code> .</li></ul>
+        <p><strong>Now that we know what Git is and it’s basic terminologies, let’s see how we can place a file under git</strong>. We’re going to do it the right way and the difficult way. Without any GUI applications.</p>
+        <p>I’m assuming you already have a file the you want to place under version control. If not create a sample folder named ‘MuskCult’ and place some sample code files in it.</p>
+
+        <h3 id="step-0-make-a-github-account-duh-">Step 0: Make a GitHub Account. Duh.</h3>
+        <p>If you don't already have one, you can make one <a href="https://github.com/join" rel="noopener">here</a>.</p>
+
+        <h3 id="step-1-make-sure-you-have-git-installed-on-you-machine-">Step 1: Make sure you have Git installed on you machine.</h3>
+
+        <p>If you are on <strong>Windows</strong>:</p>
+        <p>Just kidding… Relax… The amount of people I triggered… Phew…<br>Go to this <a href="https://www.apple.com/macos/what-is/" rel="noopener"><strong>link</strong></a> or this<strong> <a href="https://gitforwindows.org/" rel="noopener">link</a></strong> for more info on how to get it.</p>
+
+
+
+
+
+    
+    
     </div>
 </body>
 </html>
