@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Git</title>
 </head>
@@ -13,7 +13,7 @@
     <div class="container" id="main">
         <img id="cover" src="images/cover.jpg" alt="">
 
-        <h1>Learn the Basics of Git</h1>
+        <h2>Learn the Basics of Git</h2>
 
         <h4 >What is Version Control?</h3>
         <blockquote>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later. So ideally, we can place any file in the computer on version control.</blockquote>
@@ -23,7 +23,7 @@
         <h3 >So What is Git?</h3>
         <p>Git is a version-control system for tracking changes in computer files and coordinating work on those files among multiple people. Git is a <strong><em>Distributed Version Control System</em></strong>. So Git does not necessarily rely on a central server to store all the versions of a project’s files. Instead, every user “clones” a copy of a repository (a collection of files) and has the <strong><em>full</em></strong> history of the project on their own hard drive. This clone has <em>all</em> of the metadata of the original while the original itself is stored on a self-hosted server or a third party hosting service like GitHub.</p>
         <p>Git helps you <strong><em>keep track of the changes</em></strong> you make to your code. It is basically the history tab for your code editor(With no incognito mode ?). If at any point while coding you hit a fatal error and don’t know what’s causing it you can always revert back to the stable state. So it is very helpful for debugging. Or you can simply see what changes you made to your code over time.</p>
-        <figure ><img src="https://cdn-media-1.freecodecamp.org/images/1*Lp_67l9zwur7aaFAhpVDrg.png" class="kg-image" alt=""><figcaption>A simple example of version history of a file.</figcaption></figure>
+        <figure ><img src="https://cdn-media-1.freecodecamp.org/images/1*Lp_67l9zwur7aaFAhpVDrg.png"  alt=""><figcaption>A simple example of version history of a file.</figcaption></figure>
         <p>In the example above, all three cards represent different versions of the same file. We can select which version of the file we want to use at any point of time. So I can jump to and fro to any version of the file in the git time continuum.</p>
         <p>Git also helps you <strong><em>synchronise code</em></strong> between multiple people. So imagine you and your friend are collaborating on a project. You both are working on the same project files. Now Git takes those changes you and your friend made independently and merges them to a single “<strong>Master</strong>” repository. So by using Git you can ensure you both are working on the most recent version of the repository. So you don’t have to worry about mailing your files to each other and working with a ridiculous number of copies of the original file. And collaborating long distance becomes as easy as HTML ?.</p>
     
@@ -32,7 +32,7 @@
     
         <h4 >There are four fundamental elements in the Git Workflow.</h4>
         <p><strong>Working Directory</strong>, <strong>Staging Area</strong>, <strong>Local Repository</strong> and <strong>Remote Repository</strong>.</p>
-        <figure ><img src="https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png" class="kg-image" alt=""><figcaption>Diagram of a simple Git Workflow</figcaption></figure>
+        <figure ><img src="https://cdn-media-1.freecodecamp.org/images/1*iL2J8k4ygQlg3xriKGimbQ.png"  alt=""><figcaption>Diagram of a simple Git Workflow</figcaption></figure>
 
         <p><strong>If you consider a file in your Working Directory, it can be in three possible states.</strong></p>
         <ol><li><strong>It can be staged.</strong> Which means the files with the updated changes are marked to be committed to the local repository but not yet committed.</li><li><strong>It can be modified</strong>. Which means the files with the updated changes are not yet stored in the local repository.</li><li><strong>It can be committed</strong>. Which means that the changes you made to your file are safely stored in the local repository.</li></ol>
@@ -40,13 +40,13 @@
         <p><strong>Now that we know what Git is and it’s basic terminologies, let’s see how we can place a file under git</strong>. We’re going to do it the right way and the difficult way. Without any GUI applications.</p>
         <p>I’m assuming you already have a file the you want to place under version control. If not create a sample folder named ‘MuskCult’ and place some sample code files in it.</p>
 
-        <h3>Step 0: Make a GitHub Account. Duh.</h3>
+        <h3>Make a GitHub Account. Duh.</h3>
         <p>If you don't already have one, you can make one <a href="https://github.com/join" rel="noopener">here</a>.</p>
 
 
 
 
-        <h3>Step 1: Make sure you have Git installed on you machine.</h3>
+        <h3>Make sure you have Git installed on you machine.</h3>
         <p>If you are on <strong>Windows</strong>:</p>
         <p>There are also a few ways to install Git on Windows.
             The most official build is available for download on the Git website.
@@ -55,14 +55,14 @@
         <p>To get an automated installation you can use the <a href="https://chocolatey.org/packages/git">Git Chocolatey package</a>.
             Note that the Chocolatey package is community maintained.</p>    
 
-        <h3 >Step 4: Let’s Git</h3>
+        <h3 >Let’s Git</h3>
         <p>Create a new repository on GitHub. Follow this <a href="https://github.com/new" rel="noopener">link</a>.<br>Now, locate to the folder you want to place under git in your terminal.</p>
         <pre><code>$ cd Desktop/MuskCult</code></pre>
         
         <h4 >Initialize Git:</h4>
         <p>And to place it under git, enter:</p>
         <pre><code>$ touch README.md    # To create a README file for the repository$ git init           # Initiates an empty git repository</code></pre>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*Q_DUXRghgFQb9F47mUB6LQ.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*Q_DUXRghgFQb9F47mUB6LQ.gif"  alt=""></figure>
         <p>Now go edit the README.md file to provide information about the repository.</p>
         <h4 >Add files to the Staging Area for commit:</h4>
         <p>Now to add the files to the git repository for commit:</p>
@@ -73,17 +73,17 @@
 
         <h4>Before we commit let’s see what files are staged:</h4>
         <pre><code>$ git status # Lists all new or modified files to be committed</code></pre>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*a2_hw7cMe2R9R_aI86dB-A.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*a2_hw7cMe2R9R_aI86dB-A.gif"  alt=""></figure>
         <h4>Commit Changes you made to your Git Repo:</h4>
         <p>Now to commit files you added to your git repo:</p>
         <pre><code>$ git commit -m "First commit"# The message in the " " is given so that the other users can read the message and see what changes you made</code></pre>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*LoUwFy29RkgCS7hCajd_3g.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*LoUwFy29RkgCS7hCajd_3g.gif"  alt=""></figure>
 
 
         <h4>Uncommit Changes you just made to your Git Repo:</h4>
         <p>Now suppose you just made some error in your code or placed an unwanted file inside the repository, you can unstage the files you just added using:</p>
         <pre><code>$ git reset HEAD~1# Remove the most recent commit# Commit again!</code></pre>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*rxOX_U-ZRmGfhgIhNWlDIQ.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*rxOX_U-ZRmGfhgIhNWlDIQ.gif"  alt=""></figure>
 
 
 
@@ -95,9 +95,9 @@
         <p>The <strong>git remote -v</strong> command lists the URLs of the remote connections you have to other repositories.</p>
         <pre><code>$ git push -u origin master # pushes changes to origin</code></pre>
         <p>Now the <strong>git push </strong>command pushes the changes in your local repository up to the remote repository you specified as the origin.</p>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*w-nfopsKIks_JRzFe5D8xA.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*w-nfopsKIks_JRzFe5D8xA.gif" alt=""></figure>
         <p>And now if we go and check our repository page on GitHub it should look something like this:</p>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*aQljQFkytY84BgmlVtpgmw.png" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*aQljQFkytY84BgmlVtpgmw.png"  alt=""></figure>
         <p>And that’s it. You’ve just added the files to the repository you just created on GitHub.</p>
 
 
@@ -105,7 +105,7 @@
         <h4>See the Changes you made to your file:</h4>
         <p>Once you start making changes on your files and you save them, the file won’t match the last version that was committed to git. To see the changes you just made:</p>
         <pre><code>$ git diff # To show the files changes not yet staged</code></pre>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*xym1QvvvWorfoyGMXv28Yg.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*xym1QvvvWorfoyGMXv28Yg.gif"  alt=""></figure>
 
 
         <h4>Revert back to the last committed version to the Git Repo:</h4>
@@ -113,19 +113,21 @@
         <pre><code>$ git checkout .</code></pre>
         <pre><code>OR for a specific file</code></pre>
         <pre><code>$ git checkout -- &lt;filename&gt;</code></pre>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*HYgYkfo3W4MUA8CJl12rXg.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*HYgYkfo3W4MUA8CJl12rXg.gif"  alt=""></figure>
 
         <h4>View Commit History:</h4>
         <p>You can use the <strong>git log</strong> command to see the history of commit you made to your files:</p>
         <pre><code>$ git log</code></pre>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*9w7uBJcQMxc708DBw8Sewg.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*9w7uBJcQMxc708DBw8Sewg.gif"  alt=""></figure>
 
-        <h3>Step 5 : That’s all well and good… But How do I download and work on other repositories on GitHub?</h3>
+        <h3>That’s all well and good… But How do I download and work on other repositories on GitHub?</h3>
+
+
         <h4>Cloning a Git Repo:</h4>
         <p>Locate to the directory you want to clone the repo. Copy the link of the repository you want and enter the following:</p>
         <pre><code>$ git clone remote_repository_URL</code></pre>
-        <p>Feel free to go ahead and clone the repo I created above using: <a href="https://github.com/Gothamv/MuskCult" rel="noopener">https://github.com/Gothamv/MuskCult</a></p>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*6NACk8-IiBjbauM-k-aesQ.gif" class="kg-image" alt=""></figure>
+        <p>Feel free to go ahead and clone the repo I created above using: <a href="https://github.com/adeelsaleem-se/gitpages" rel="noopener">https://github.com/adeelsaleem-se/gitpages</a></p>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*6NACk8-IiBjbauM-k-aesQ.gif"  alt=""></figure>
 
         <h4>Pushing Changes to the Git Repo:</h4>
         <p>Now you can work on the files you want and commit to changes locally. If you want to push changes to that repository you either have to be <a href="https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/" rel="noopener">added as a collaborator</a> for the repository or you have create something known as pull request. Go and check out how to do one <a href="https://help.github.com/articles/creating-a-pull-request/" rel="noopener">here</a> and give me a pull request with your code file.</p>
@@ -133,13 +135,13 @@
         <h4>Collaborating:</h4>
         <p>So imagine you and your friend are collaborating on a project. You both are working on the same project files. Each time you make some changes and push it into the master repo, your friend has to pull the changes that you pushed into the git repo. Meaning to make sure you’re working on the latest version of the git repo each time you start working, a git pull command is the way to go.</p>
         <p>Now below is an example of a project my friend and I are collaborating on:</p>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*2-tl2rHsgPqiv88aI55CPw.png" class="kg-image" alt=""><figcaption>There has just been a commit on the repo</figcaption></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*2-tl2rHsgPqiv88aI55CPw.png"  alt=""><figcaption>There has just been a commit on the repo</figcaption></figure>
         <p>So to make sure those changes are reflected on my local copy of the repo:</p>
         <pre><code>$ git pull origin master</code></pre>
-        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*ySDKu2OEdkc26yOUp-TJJQ.gif" class="kg-image" alt=""></figure>
+        <figure><img src="https://cdn-media-1.freecodecamp.org/images/1*ySDKu2OEdkc26yOUp-TJJQ.gif"  alt=""></figure>
 
 
-        <h4>Here’s two more useful git commands:</h4>
+        <h4> git fetch & merge commands:</h4>
         <pre><code>$ git fetch    AND$ git merge</code></pre>
         <p>In the simplest terms, <code>git fetch</code> followed by a <code>git merge </code>equals a <code>git pull</code>. But then why do these exist?</p>
         <p>When you use <code>git pull</code>, Git tries to automatically do your work for you. <strong>It is context sensitive</strong>, so Git will merge any pulled commits into the branch you are currently working in. <code>git pull</code> <strong>automatically merges the commits without letting you review them first</strong>.</p>
