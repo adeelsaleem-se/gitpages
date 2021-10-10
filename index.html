@@ -46,12 +46,101 @@
         <p>If you are on <strong>Windows</strong>:</p>
         <p>Just kidding… Relax… The amount of people I triggered… Phew…<br>Go to this <a href="https://www.apple.com/macos/what-is/" rel="noopener"><strong>link</strong></a> or this<strong> <a href="https://gitforwindows.org/" rel="noopener">link</a></strong> for more info on how to get it.</p>
 
+        <h3 id="step-4-let-s-git">Step 4: Let’s Git</h3>
+        <p>Create a new repository on GitHub. Follow this <a href="https://github.com/new" rel="noopener">link</a>.<br>Now, locate to the folder you want to place under git in your terminal.</p>
+        <pre><code>$ cd Desktop/MuskCult</code></pre>
+        <h4 id="initialize-git-">Initialize Git:</h4>
+        <p>And to place it under git, enter:</p>
+        <pre><code>$ touch README.md    # To create a README file for the repository$ git init           # Initiates an empty git repository</code></pre>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*Q_DUXRghgFQb9F47mUB6LQ.gif" class="kg-image" alt=""></figure>
+        <p>Now go edit the README.md file to provide information about the repository.</p>
+        <h4 id="add-files-to-the-staging-area-for-commit-">Add files to the Staging Area for commit:</h4>
+        <p>Now to add the files to the git repository for commit:</p>
+        <pre><code>$ git add .  # Adds all the files in the local repository and stages them for commit</code></pre>
+        <pre><code>OR if you want to add a specific file</code></pre>
+        <pre><code>$ git add README.md # To add a specific file</code></pre>
+
+
+        <h4 id="before-we-commit-let-s-see-what-files-are-staged-">Before we commit let’s see what files are staged:</h4>
+        <pre><code>$ git status # Lists all new or modified files to be committed</code></pre>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*a2_hw7cMe2R9R_aI86dB-A.gif" class="kg-image" alt=""></figure>
+        <h4 id="commit-changes-you-made-to-your-git-repo-">Commit Changes you made to your Git Repo:</h4>
+        <p>Now to commit files you added to your git repo:</p>
+        <pre><code>$ git commit -m "First commit"# The message in the " " is given so that the other users can read the message and see what changes you made</code></pre>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*LoUwFy29RkgCS7hCajd_3g.gif" class="kg-image" alt=""></figure>
+
+
+        <h4 id="uncommit-changes-you-just-made-to-your-git-repo-">Uncommit Changes you just made to your Git Repo:</h4>
+        <p>Now suppose you just made some error in your code or placed an unwanted file inside the repository, you can unstage the files you just added using:</p>
+        <pre><code>$ git reset HEAD~1# Remove the most recent commit# Commit again!</code></pre>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*rxOX_U-ZRmGfhgIhNWlDIQ.gif" class="kg-image" alt=""></figure>
+
+
+
+        <h4 id="add-a-remote-origin-and-push-">Add a remote origin and Push:</h4>
+        <p>Now each time you make changes in your files and save it, it won’t be automatically updated on GitHub. All the changes we made in the file are updated in the local repository. Now to update the changes to the master:</p>
+        <pre><code>$ git remote add origin remote_repository_URL# sets the new remote</code></pre>
+        <p>The <strong>git remote</strong> command lets you create, view, and delete connections to other repositories.</p>
+        <pre><code>$ git remote -v# List the remote connections you have to other repositories.</code></pre>
+        <p>The <strong>git remote -v</strong> command lists the URLs of the remote connections you have to other repositories.</p>
+        <pre><code>$ git push -u origin master # pushes changes to origin</code></pre>
+        <p>Now the <strong>git push </strong>command pushes the changes in your local repository up to the remote repository you specified as the origin.</p>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*w-nfopsKIks_JRzFe5D8xA.gif" class="kg-image" alt=""></figure>
+        <p>And now if we go and check our repository page on GitHub it should look something like this:</p>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*aQljQFkytY84BgmlVtpgmw.png" class="kg-image" alt=""></figure>
+        <p>And that’s it. You’ve just added the files to the repository you just created on GitHub.</p>
+
+
+
+        <h4 id="see-the-changes-you-made-to-your-file-">See the Changes you made to your file:</h4>
+        <p>Once you start making changes on your files and you save them, the file won’t match the last version that was committed to git. To see the changes you just made:</p>
+        <pre><code>$ git diff # To show the files changes not yet staged</code></pre>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*xym1QvvvWorfoyGMXv28Yg.gif" class="kg-image" alt=""></figure>
+
+
+        <h4 id="revert-back-to-the-last-committed-version-to-the-git-repo-">Revert back to the last committed version to the Git Repo:</h4>
+        <p>Now you can choose to revert back to the last committed version by entering:</p>
+        <pre><code>$ git checkout .</code></pre>
+        <pre><code>OR for a specific file</code></pre>
+        <pre><code>$ git checkout -- &lt;filename&gt;</code></pre>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*HYgYkfo3W4MUA8CJl12rXg.gif" class="kg-image" alt=""></figure>
+
+        <h4 id="view-commit-history-">View Commit History:</h4>
+        <p>You can use the <strong>git log</strong> command to see the history of commit you made to your files:</p>
+        <pre><code>$ git log</code></pre>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*9w7uBJcQMxc708DBw8Sewg.gif" class="kg-image" alt=""></figure>
+
+        <h3 id="step-5-that-s-all-well-and-good-but-how-do-i-download-and-work-on-other-repositories-on-github">Step 5 : That’s all well and good… But How do I download and work on other repositories on GitHub?</h3>
+        <h4 id="cloning-a-git-repo-">Cloning a Git Repo:</h4>
+        <p>Locate to the directory you want to clone the repo. Copy the link of the repository you want and enter the following:</p>
+        <pre><code>$ git clone remote_repository_URL</code></pre>
+        <p>Feel free to go ahead and clone the repo I created above using: <a href="https://github.com/Gothamv/MuskCult" rel="noopener">https://github.com/Gothamv/MuskCult</a></p>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*6NACk8-IiBjbauM-k-aesQ.gif" class="kg-image" alt=""></figure>
+
+        <h4 id="pushing-changes-to-the-git-repo-">Pushing Changes to the Git Repo:</h4>
+        <p>Now you can work on the files you want and commit to changes locally. If you want to push changes to that repository you either have to be <a href="https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/" rel="noopener">added as a collaborator</a> for the repository or you have create something known as pull request. Go and check out how to do one <a href="https://help.github.com/articles/creating-a-pull-request/" rel="noopener">here</a> and give me a pull request with your code file.</p>
+
+        <h4 id="collaborating-">Collaborating:</h4>
+        <p>So imagine you and your friend are collaborating on a project. You both are working on the same project files. Each time you make some changes and push it into the master repo, your friend has to pull the changes that you pushed into the git repo. Meaning to make sure you’re working on the latest version of the git repo each time you start working, a git pull command is the way to go.</p>
+        <p>Now below is an example of a project my friend and I are collaborating on:</p>
+        <figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://cdn-media-1.freecodecamp.org/images/1*2-tl2rHsgPqiv88aI55CPw.png" class="kg-image" alt=""><figcaption>There has just been a commit on the repo</figcaption></figure>
+        <p>So to make sure those changes are reflected on my local copy of the repo:</p>
+        <pre><code>$ git pull origin master</code></pre>
+        <figure class="kg-card kg-image-card"><img src="https://cdn-media-1.freecodecamp.org/images/1*ySDKu2OEdkc26yOUp-TJJQ.gif" class="kg-image" alt=""></figure>
+
+
+        <h4 id="here-s-two-more-useful-git-commands-">Here’s two more useful git commands:</h4>
+        <pre><code>$ git fetch    AND$ git merge</code></pre>
+        <p>In the simplest terms, <code>git fetch</code> followed by a <code>git merge </code>equals a <code>git pull</code>. But then why do these exist?</p>
+        <p>When you use <code>git pull</code>, Git tries to automatically do your work for you. <strong>It is context sensitive</strong>, so Git will merge any pulled commits into the branch you are currently working in. <code>git pull</code> <strong>automatically merges the commits without letting you review them first</strong>.</p>
+        <p>When you <code>git fetch</code>, Git gathers any commits from the target branch that do not exist in your current branch and <strong>stores them in your local repository</strong>. However, <strong>it does not merge them with your current branch</strong>. This is particularly useful if you need to keep your repository up to date, but are working on something that might break if you update your files. To integrate the commits into your master branch, you use <code>git merge</code>.</p>
 
 
 
 
-    
-    
+
+
+
     </div>
 </body>
 </html>
